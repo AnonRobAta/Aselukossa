@@ -11,15 +11,7 @@ Citizen.CreateThread(function()
         local CurrentPedWeapon = GetSelectedPedWeapon(ped)
         Ase, ChancesBetween, ChancesBetween2, MaxChance, Seconds, CanExplode, ExplodeChancesBetween, ExplodeChancesBetween2, ExplodeChancesMax = GetWeapon(CurrentPedWeapon)
             if Ase then
-                ChancesBetween = ChancesBetween
-                ChancesBetween2 = ChancesBetween2
-                MaxChance = MaxChance
                 Seconds = Seconds * 1000
-                CanExplode = CanExplode
-                ExplodeChancesBetween = ExplodeChancesBetween
-                ExplodeChancesBetween2 = ExplodeChancesBetween2
-                ExplodeChancesMax = ExplodeChancesMax
-                ExplodeChances = ExplodeChances
                 local ThisChance = math.random(1, MaxChance)
                 if ThisChance >= ChancesBetween and ThisChance <= ChancesBetween2 then
                     exports['mythic_notify']:DoHudText('error', 'Aseesi on lukossa Paina [G] ottaaksesi aseen pois lukostas')
